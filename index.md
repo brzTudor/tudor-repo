@@ -38,8 +38,18 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 
 <body> 
+  
   Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button> 
-  Show all cookies stored <button onclick="showCookies()">Display all cookies</button>
+  <button onclick="resetOnce()">Reset only once cookie</button>
+
+  <button onclick="clearOutputResetOnce()">
+    Clear
+  </button>
+
+<div>
+  <code id="reset-once"></code>
+</div>
+  
 </body>
 
 <script>
@@ -47,6 +57,22 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
   document.cookie = "favorite_task=collect Data"; 
   function alertCookie() { 
     alert(document.cookie); 
-  } 
+  }
+  
+  function resetOnce() {
+  // Note that we are setting `SameSite=None;` in this example because the example
+  // needs to work cross-origin.
+  // It is more common not to set the `SameSite` attribute, which results in the default,
+  // and more secure, value of `SameSite=Lax;`
+  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+
+  const output = document.getElementById('reset-once')
+  output.textContent = '> Reset!'
+}
+
+function clearOutputResetOnce() {
+  const output = document.getElementById('reset-once')
+  output.textContent = ''
+}
 </script>
 
