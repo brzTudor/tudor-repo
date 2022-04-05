@@ -39,7 +39,7 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 <body> 
   Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button> 
-  
+  Show all cookies stored <button onclick="showCookies()">Display all cookies</button>
 </body>
 
 <script>
