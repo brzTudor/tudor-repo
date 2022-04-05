@@ -40,7 +40,9 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 <body> 
   
   Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button> 
+  
   <br>
+  
   <button onclick="resetOnce()">Reset only once cookie</button>
 
   <button onclick="clearOutputResetOnce()">
@@ -50,7 +52,9 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 <div>
   <code id="reset-once"></code>
 </div>
+  
   <br>
+  
   <button onclick="checkACookieExists()">
   Check a cookie exists
 </button>
@@ -62,7 +66,24 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 <div>
   <code id="a-cookie-existence"></code>
 </div>
+  
   <br>
+  
+  <button onclick="checkCookieHasASpecificValue()">
+  Check that a cookie has a specific value
+</button>
+
+<button onclick="clearASpecificValueOfTheCookie()">
+  Clear
+</button>
+
+<div>
+  <code id="a-specific-value-of-the-cookie"></code>
+</div>
+  
+  <br>
+  
+  
 </body>
 
 <script>
@@ -99,6 +120,18 @@ function checkACookieExists() {
 
 function clearOutputACookieExists() {
   const output = document.getElementById('a-cookie-existence')
+  output.textContent = ''
+}
+  
+  function checkCookieHasASpecificValue() {
+  if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
+    const output = document.getElementById('a-specific-value-of-the-cookie')
+    output.textContent = '> The cookie "reader" has a value of "1"'
+  }
+}
+
+function clearASpecificValueOfTheCookie() {
+  const output = document.getElementById('a-specific-value-of-the-cookie')
   output.textContent = ''
 }
 </script>
