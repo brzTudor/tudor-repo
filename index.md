@@ -43,18 +43,10 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 </body>
 
 <script>
-  document.cookie = "session=test GDPR"; document.cookie = "favorite_task=collect Data"; function alertCookie() { alert(document.cookie); } 
-  document.cookie = "name=oeschger; SameSite=None; Secure";
-document.cookie = "favorite_food=tripe; SameSite=None; Secure";
-
-function showCookies() {
-  const output = document.getElementById('cookies')
-  output.textContent = '> ' + document.cookie
-}
-
-function clearOutputCookies() {
-  const output = document.getElementById('cookies')
-  output.textContent = ''
-}
+  document.cookie = "session=test GDPR"; 
+  document.cookie = "favorite_task=collect Data"; 
+  function alertCookie() { 
+    alert(document.cookie); 
+  } 
 </script>
 
