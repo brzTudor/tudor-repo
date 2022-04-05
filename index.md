@@ -83,7 +83,10 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
   
   <br>
   
-  
+  Cookie policy: <button onclick="showFooter()"></button>
+  <div>
+    
+  </div>
 </body>
 
 <script>
